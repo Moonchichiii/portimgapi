@@ -19,8 +19,8 @@ INSTALLED_APPS = [
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
-    'cloudinary',
     'django.contrib.staticfiles',
+    'cloudinary',
     'cloudinary_storage',
     'rest_framework',
     'rest_framework_simplejwt.token_blacklist',
@@ -96,6 +96,7 @@ STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'static'),
+    os.path.join(BASE_DIR, 'static', 'frontend'),
 ]
 
 CLOUDINARY_STORAGE = {
