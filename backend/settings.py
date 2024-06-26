@@ -32,8 +32,7 @@ INSTALLED_APPS = [
     'profiles',
     'blog',
     'notifications',
-    'chatbot',
-    'chat',
+    'chatbot',    
 ]
 
 MIDDLEWARE = [
@@ -45,7 +44,6 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    # 'channels.middleware.BaseMiddleware',
 ]
 
 ROOT_URLCONF = 'backend.urls'
@@ -53,7 +51,7 @@ ROOT_URLCONF = 'backend.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR, 'templates')],
+        'DIRS': [os.path.join(BASE_DIR, 'frontend', 'dist')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -69,26 +67,6 @@ TEMPLATES = [
 WSGI_APPLICATION = 'backend.wsgi.application'
 
 ASGI_APPLICATION = 'backend.asgi.application'
-
-# CHANNEL_LAYERS = {
-#     'default': {
-#         'BACKEND': 'channels_redis.core.RedisChannelLayer',
-#         'CONFIG': {
-#             "hosts": [("127.0.0.1", 6379)],
-#         },
-#     },
-# }
-
-# DATABASES = {
-#     'default': dj_database_url.config(
-#         default=DATABASE_URL
-#     )
-# }
-
-
-
-
-
 
 DATABASES = {
     'default': {
