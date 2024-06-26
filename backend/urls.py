@@ -9,5 +9,5 @@ urlpatterns = [
     path('api/profiles/', include('profiles.urls')),
     path('api/blog/', include('blog.urls')),
     path('api/notifications/', include('notifications.urls')),
-    path('api/chatbot/', include('chatbot.urls')),    
+    path('api/chatbot/', include('chatbot.urls')),
 ]
