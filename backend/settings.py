@@ -7,7 +7,7 @@ from datetime import timedelta
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-SECRET_KEY = config('SECRET_KEY', default='your-default-secret-key')
+SECRET_KEY = config('SECRET_KEY')
 DEBUG = True
 ALLOWED_HOSTS = config('ALLOWED_HOSTS', default='', cast=Csv())
 CORS_ALLOWED_ORIGINS = config('CORS_ALLOWED_ORIGINS', cast=Csv())
@@ -26,12 +26,12 @@ INSTALLED_APPS = [
     'rest_framework',
     'rest_framework_simplejwt.token_blacklist',
     'corsheaders',
-    'django_filters',    
+    'django_filters',
     'users',
     'profiles',
     'blog',
     'notifications',
-    'chatbot',    
+    'chatbot',
 ]
 
 MIDDLEWARE = [
@@ -64,8 +64,13 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'backend.wsgi.application'
-
 ASGI_APPLICATION = 'backend.asgi.application'
+
+# DATABASES = {
+#     'default': dj_database_url.config(default=DATABASE_URL)
+# }
+
+
 
 DATABASES = {
     'default': {
@@ -101,9 +106,7 @@ STATICFILES_DIRS = [
 ]
 
 CLOUDINARY_STORAGE = {
-    'CLOUD_NAME': config('CLOUDINARY_CLOUD_NAME'),
-    'API_KEY': config('CLOUDINARY_API_KEY'),
-    'API_SECRET': config('CLOUDINARY_API_SECRET'),
+    'CLOUDINARY_URL': config('CLOUDINARY_URL')
 }
 
 DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
