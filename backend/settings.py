@@ -1,6 +1,7 @@
 import os
 from pathlib import Path
 from decouple import config, Csv
+from corsheaders.defaults import default_headers
 from datetime import timedelta
 
 BASE_DIR = Path(__file__).resolve().parent.parent
