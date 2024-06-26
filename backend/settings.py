@@ -1,6 +1,5 @@
 import os
 from pathlib import Path
-from corsheaders.defaults import default_headers
 from decouple import config, Csv
 from datetime import timedelta
 
@@ -12,8 +11,6 @@ ALLOWED_HOSTS = config('ALLOWED_HOSTS', default='', cast=Csv())
 
 CORS_ALLOWED_ORIGINS = config('CORS_ALLOWED_ORIGINS', cast=Csv())
 CSRF_TRUSTED_ORIGINS = config('CSRF_TRUSTED_ORIGINS', cast=Csv())
-
-#DATABASE_URL = config('DATABASE_URL')
 
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -51,7 +48,7 @@ ROOT_URLCONF = 'backend.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR, 'frontend', 'dist','assets')],
+        'DIRS': [os.path.join(BASE_DIR, 'frontend', 'dist')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -66,12 +63,6 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'backend.wsgi.application'
 ASGI_APPLICATION = 'backend.asgi.application'
-
-# DATABASES = {
-#     'default': dj_database_url.config(default=DATABASE_URL)
-# }
-
-
 
 DATABASES = {
     'default': {
@@ -101,14 +92,10 @@ USE_I18N = True
 USE_TZ = True
 
 STATIC_URL = '/static/'
-
-
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, 'frontend', 'dist','assets'),
     os.path.join(BASE_DIR, 'frontend', 'dist'),
-    
 ]
 
 CLOUDINARY_STORAGE = {
