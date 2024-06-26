@@ -150,5 +150,3 @@ pytest.ini
 
 # Pipfile.lock
 Pipfile.lock
-static/
-dist/
