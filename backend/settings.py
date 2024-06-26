@@ -93,16 +93,8 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
-
-<<<<<<< HEAD
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'frontend', 'dist'),
-=======
-STATICFILES_DIRS = [    
-    os.path.join(BASE_DIR, 'frontend', 'dist'),
-    os.path.join(BASE_DIR, 'frontend', 'dist','assets'),
-    
->>>>>>> 09a2893dda4b008cc4eb49297b8a596da7117e09
 ]
 
 CLOUDINARY_STORAGE = {
