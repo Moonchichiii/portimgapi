@@ -1,0 +1,1 @@
+import{j as e}from"./main-Bn22BZz-.js";const t=()=>e.jsxs("div",{children:[e.jsx("h1",{children:"Welcome to the Home Page"}),e.jsx("p",{children:"This is the homepage of the portfolio website."})]});export{t as default};
