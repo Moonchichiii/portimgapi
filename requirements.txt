@@ -21,3 +21,4 @@ urllib3==1.26.5
 certifi==2024.6.2
 typing-extensions==4.12.2
 anyio==3.5.0 
+distro==1.9.0
