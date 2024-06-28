@@ -20,9 +20,9 @@ def update_template_with_vite_assets(manifest_path, template_path):
         content = template_file.read()
 
     if js_file:
-        content = content.replace('{% static \'assets/index.js\' %}', f"{{% static '{js_file}' %}}")
+        content = content.replace('{% static \'main-BySKFQF.js\' %}', f"{{% static '{js_file}' %}}")
     if css_file:
-        content = content.replace('{% static \'assets/index.css\' %}', f"{{% static '{css_file}' %}}")
+        content = content.replace('{% static \'main-BGMQSKmu.css\' %}', f"{{% static '{css_file}' %}}")
 
     with open(template_path, 'w') as template_file:
         template_file.write(content)
