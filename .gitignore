@@ -153,6 +153,3 @@ pytest.ini
 Pipfile.lock
 
 
-# Ignore frontend build output
-backend/static/*
-!backend/static/.keep  # Optional, to ensure the directory exists

@@ -1,0 +1,32 @@
+# Python bytecode
+__pycache__
+*.pyc
+
+# Virtual environments
+venv/
+*.egg-info/
+
+# Git
+.git
+.gitignore
+
+# Node.js
+node_modules/
+frontend/node_modules/
+
+# Build directories
+build/
+dist/
+frontend/dist/
+
+# Docker
+Dockerfile
+.dockerignore
+
+# Logs
+*.log
+*.bak
+*.tmp
+*.swp
+*.swo
+*.DS_Store
